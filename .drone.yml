@@ -1,5 +1,6 @@
 kind: pipeline
 name: default
+privileged: true
 
 steps:
 - name: restore-cache
