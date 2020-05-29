@@ -1,0 +1,19 @@
+.section-about {
+    // background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    padding-bottom: 15rem;
+    margin-top: -20vh;
+    // background-image: url(../img/summer.jpg);
+    background-size: cover;
+    background-position: top;
+
+    @include respond(tab-port) {
+        padding: 20rem 0;
+    }
+}
+
+.section-story {
+    padding: 15rem 0rem 25rem 0 ;
+    // background-color: $color-grey-light-1;
+    position: relative;
+}

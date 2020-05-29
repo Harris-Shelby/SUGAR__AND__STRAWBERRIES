@@ -1,0 +1,60 @@
+.header {
+    height: 70rem;
+    background-image:
+        linear-gradient(
+            to right bottom,
+            rgba($color-black, .18),
+            rgba($color-black, .05)
+        ), 
+        url(../img/station.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);   
+    }
+    &__logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        color: $color-white;
+        animation-name: moveInShadow;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+    
+    &__logo {
+        font-family: 'Allura', cursive;
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    
+    &__logo:first-child {
+        transform: translateY(-2px)
+    }
+    
+    &__logo:nth-child(2) {
+        transform: translateY(3px)
+    }
+    
+    &__logo:nth-child(3) {
+        transform: translateY(-4px)
+    }
+    
+    &__logo:last-child {
+        font-size: 16px;
+        transform: translateY(-10px);
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        /* text-align: center; */
+    }
+}

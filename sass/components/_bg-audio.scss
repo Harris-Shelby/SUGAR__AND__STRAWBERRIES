@@ -1,0 +1,22 @@
+.bg-audio {
+    height: 12rem;
+    width: 30rem;
+    margin: 0 auto;
+    background-color: #e23c13;
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+
+    &__shape {
+        width: 10rem;
+        height: 10rem;
+        background-color: orangered;
+        position: relative;
+        top: 50%;
+        transform: translate(10%, -50%);
+        shape-outside: circle(50% at 50% 50%);
+        --weblit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        --webkit-clip-path: circle(50% at 50% 50%);
+    }
+}

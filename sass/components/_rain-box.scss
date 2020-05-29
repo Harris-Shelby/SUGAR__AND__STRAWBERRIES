@@ -1,0 +1,22 @@
+.rain-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    &__drop {
+        display: inline-block;
+        height: 20px;
+        width: calc(var(--x) * 0.3px);
+        background-color: $color-white;
+        clip-path: ellipse(2% 40% at 49% 45%);
+        transform: translateY(calc((var(--y) + 50) * -1px));
+        animation-name: rainDrop;
+        animation-delay: calc(var(--y) * 0.01s);
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+}
+

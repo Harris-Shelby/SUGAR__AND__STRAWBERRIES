@@ -1,0 +1,27 @@
+.u-center-text {
+    text-align: center;
+}
+
+.u-marign-bottom-small {
+    margin-bottom: 1.5rem !important;
+}
+
+.u-marign-bottom-medium {
+    margin-bottom: 4rem !important;
+}
+
+.u-marign-bottom-big {
+    margin-bottom: 8rem !important;
+    
+    // @include respond(tab-port) {
+    //     margin-bottom: 3rem !important;
+    // }
+}
+
+.emjio {
+    font-family: 'Noto Color Emoji';
+    font-style: normal;
+}
+
+
+

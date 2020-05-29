@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Noto Color Emoji';
+    src: url('../fonts/NotoColorEmoji.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // this define what 1 rem is
+    // 1rem = 10px 10/16 = 62.5%
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    // @include respond(phone) {
+    //     font-size: 30%; // 1rem = 8px 8/16 = 50%
+    // }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 30px;
+
+    @include respond(tab-port) {
+        padding: 16px;
+    }
+
+}

@@ -1,0 +1,23 @@
+/*
+linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8))
+*/
+@import 'abstracts/functions';
+@import 'abstracts/minxins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typpgraphy';
+@import 'base/utilities';
+
+@import 'components/bg-audio';
+@import 'components/bg-video';
+@import 'components/button';
+@import 'components/heart';
+@import 'components/rain-box';
+@import 'components/story';
+
+@import 'layout/grid';
+@import 'layout/header';
+
+@import 'pages/home';

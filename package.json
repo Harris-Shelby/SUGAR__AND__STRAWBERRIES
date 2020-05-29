@@ -1,0 +1,22 @@
+{
+  "name": "love-story",
+  "version": "1.0.0",
+  "description": "love ",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "compile:dev": "node-sass sass/main.scss css/style.css -w",
+    "compile:font": " fsp local ./*.html",
+    "start": "live-server --port=8000"
+  },
+  "author": "qsobiaolian@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "emojione": "^4.5.0",
+    "jsmediatags": "^3.9.3"
+  }
+}
