@@ -1,0 +1,90 @@
+kind: pipeline
+name: default
+
+steps:
+- name: restore-cache
+  image: drillster/drone-volume-cache:latest
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+- name: build
+  image: node
+  commands:
+    - npm install
+    - npm run compile:sass
+
+- name: deploy
+  image: appleboy/drone-scp:latest
+  settings:
+    host:
+      from_secret: SSH_HOST
+    user: 
+      from_secret: SSH_USER
+    port: 
+      from_secret: SSH_PORT
+    password:
+      from_secret: SSH_PASSWD
+    target: /var/www/love_story
+    source:
+      - ./css
+      - ./index.html
+      - ./img
+      - ./audio
+      - ./fonts
+  rm: true
+  when:
+    branch: [master]
+    status: [success]
+
+- name: deploy Sakura
+  image: appleboy/drone-scp:latest
+  settings:
+    host:
+      from_secret: SSH_HOST
+    user: 
+      from_secret: SSH_USER
+    port: 
+      from_secret: SSH_PORT
+    password:
+      from_secret: SSH_PASSWD
+    target: /opt/sakura/
+    source:
+      - ./index.js
+  rm: false
+  when:
+    branch: [master]
+    status: [success]
+
+- name: reload Sakura
+  image: appleboy/drone-ssh:latest
+  settings:
+    host:
+      from_secret: SSH_HOST
+    user: 
+      from_secret: SSH_USER
+    port: 
+      from_secret: SSH_PORT
+    password:
+      from_secret: SSH_PASSWD
+    script:
+      - pm2 restart all
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache:latest
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+
+volumes:
+  - name: cache
+    host: 
+      path: /tmp/cache
