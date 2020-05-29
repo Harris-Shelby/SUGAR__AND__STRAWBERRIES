@@ -2,8 +2,9 @@ kind: pipeline
 name: default
 
 steps:
+
 - name: restore-cache
-  image: drillster/drone-volume-cache:latest
+  image: drillster/drone-volume-cache
   volumes:
   - name: cache
     path: /cache
@@ -75,7 +76,7 @@ steps:
       - pm2 restart all
 
 - name: rebuild-cache
-  image: drillster/drone-volume-cache:latest
+  image: drillster/drone-volume-cache
   volumes:
   - name: cache
     path: /cache
