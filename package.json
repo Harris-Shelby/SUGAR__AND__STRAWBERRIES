@@ -4,10 +4,9 @@
   "description": "love ",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css",
-    "compile:dev": "node-sass sass/main.scss css/style.css -w",
-    "compile:font": " fsp local ./*.html",
-    "start": "live-server --port=8000"
+    "compile:sass": "node-sass sass/main.scss public/css/style.css",
+    "compile:dev": "node-sass sass/main.scss public/css/style.css -w",
+    "start": "live-server ./public --port=8000"
   },
   "author": "qsobiaolian@gmail.com",
   "license": "ISC",
