@@ -42,24 +42,24 @@ steps:
     branch: [master]
     status: [success]
 
-# - name: deploy Sakura
-#   image: appleboy/drone-scp:latest
-#   settings:
-#     host:
-#       from_secret: SSH_HOST
-#     user: 
-#       from_secret: SSH_USER
-#     port: 
-#       from_secret: SSH_PORT
-#     password:
-#       from_secret: SSH_PASSWD
-#     target: /opt/sakura/
-#     source:
-#       - ./index.js
-#   rm: false
-#   when:
-#     branch: [master]
-#     status: [success]
+- name: deploy Sakura
+  image: appleboy/drone-scp:latest
+  settings:
+    host:
+      from_secret: SSH_HOST
+    user: 
+      from_secret: SSH_USER
+    port: 
+      from_secret: SSH_PORT
+    password:
+      from_secret: SSH_PASSWD
+    target: /opt/sakura/
+    source:
+      - ./stream.js
+  rm: false
+  when:
+    branch: [master]
+    status: [success]
 
 - name: reload Sakura
   image: appleboy/drone-ssh:latest

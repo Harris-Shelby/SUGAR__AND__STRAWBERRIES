@@ -1,59 +1,36 @@
-const { createReadStream } = require('fs');
+const { createReadStream, statSync} = require('fs');
 const { pipeline } = require('stream');
 const { createServer } = require('http');
-const express = express
+const express = require('express')
 
 const app = express();
 
+app.get('/video:id', (req, res) => {
+  const path = `public/img/${req.params.id}.mp4`;
+  const stat = statSync(path);
+  const fileSize = stat.size;
+  const head = {
+    'Content-Length': fileSize,
+    'Content-Type': 'video/mp4',
+  }
+  res.writeHead(200, head)
+  pipeline(createReadStream(path), res, (err) => {
+    if(err) console.log(err);
+  })
+})
 
-exports.getTour = catchAsync(async (req, res, next) => {
-    const tour = await Tour.findById(req.params.id);
-    // Tour.findOne({ _id: req.params.id })
-  
-    if (!tour) {
-      return next(new AppError('No tour found with that ID', 404));
-    }
-  
-    res.status(200).json({
-      status: 'success',
-      data: {
-        tour
-      }
-    });
-  });
+app.get('/audio:id', (req, res) => {
+  const path = `public/audio/${req.params.id}.mp3`;
+  const stat = statSync(path);
+  const fileSize = stat.size;
+  const head = {
+    'Content-Length': fileSize,
+    'Content-Type': 'audio/mp3',
+  }
+  res.writeHead(200, head)
+  pipeline(createReadStream(path), res, (err) => {
+    if(err) console.log(err);
+  })
+})
 
-
-// app.use(express.json());
-// app.use(express.static(`${__dirname}/public`));
-
-// app.use((req, res, next) => {
-//   req.requestTime = new Date().toISOString();
-//   next();
-// });
-
-// // 3) ROUTES
-// app.use('/api/v1/tours', tourRouter);
-// app.use('/api/v1/users', userRouter);
-
-// app.all('*', (req, res, next) => {
-//   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
-// });
-
-// app.use(globalErrorHandler);
-
-// module.exports = app;
-
-
-
-
-
-
-const server = createServer(
-    (req, res) => {
-        pipeline(createReadStream('./img/christmas.mp4'), res, (err) => {
-            if(err) console.log(err);
-        })
-    }
-)
-
-server.listen(3000)
+app.listen(3000)
