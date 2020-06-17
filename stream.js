@@ -5,8 +5,8 @@ const express = require('express')
 
 const app = express();
 
-app.get('/video:id', (req, res) => {
-  const path = `public/img/${req.params.id}.mp4`;
+app.get('/video/:id', (req, res) => {
+  const path = `/var/www/love_story/public/img/${req.params.id}.mp4`;
   const stat = statSync(path);
   const fileSize = stat.size;
   const head = {
@@ -20,7 +20,7 @@ app.get('/video:id', (req, res) => {
 })
 
 app.get('/audio:id', (req, res) => {
-  const path = `public/audio/${req.params.id}.mp3`;
+  const path = `/var/www/love_story/public/audio/${req.params.id}.mp3`;
   const stat = statSync(path);
   const fileSize = stat.size;
   const head = {
