@@ -1,7 +1,7 @@
 .footer {
     background-color: $color-grey-dark-1;
     padding: 5rem 0 2rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: $color-grey-light-1;
     text-align: center;
     
@@ -61,9 +61,38 @@
         }
     }
 
-    &__copyright {
-        // display: inline-block;
+    &__social-box {
+        // padding: 2rem 10rem;
+        @include clearfix;
         // border-top: 1px solid $color-grey-dark;
-        // padding-top: 2rem;
+        padding: 2rem 0 0 2.5rem;
+    }
+
+    &__social-logo {
+        display: inline-block;
+        float: left;
+        width: 4rem;
+        shape-outside: circle(50% at 50% 50%);
+        --weblit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        --webkit-clip-path: circle(50% at 50% 50%);
+    }
+
+    &__social-text {
+        display: inline-block;
+        padding-left: 1rem;
+        line-height: 4rem;
+        float: left;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    &__copyright {
+        font-weight: 300;
+        font-size: 1.5rem;
+        &-svg {
+            margin: 0 0.6rem;
+            height: 1.4rem;
+        }
     }
 }
