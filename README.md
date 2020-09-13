@@ -39,7 +39,8 @@ npm i
 npm run compile:dev
 npm run start
 ```
-Don't forget to configure the [```package.json ```](https://github.com/Harris-Shelby/SUGAR__AND__STRAWBERRIES/blob/master/package.json)，I hope you guys enjoy it😘 ~
+Don't forget to configure the [```package.json ```](https://github.com/Harris-Shelby/SUGAR__AND__STRAWBERRIES/blob/master/package.json),
+I hope you guys enjoy it😘 ~
 
 **License**
 
