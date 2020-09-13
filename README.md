@@ -18,3 +18,28 @@
 **Introduction**
   
 Hi there, this project is built with HTML and Sass😜. My original intention to create this project is to build some amazing animation effects with the simple language(Sass) ,not with javascript.I hope to finish it someday in the future. So keep going✊！
+
+**Roadmap**
+
+- [X] 🌈 CSS animation of Dripping rain~~
+- [X] 💓 CSS animation of Beating heart~~
+- [X] 🌎 Responsive design ... Although it is still bad~~
+- [X] 🌱 HTTP/2~~
+- [] 🎶 Background music player
+- [] 🎈 The component of Confession balloon 
+
+In the future, i will surely final the goal above.
+
+**Development**
+
+```bash
+git clone git@github.com:Harris-Shelby/SUGAR__AND__STRAWBERRIES.git
+cd SUGAR__AND__STRAWBERRIES
+npm i
+npm run compile:dev
+npm run start
+```
+Don't forget to configure the [```package.json ```](https://github.com/Harris-Shelby/SUGAR__AND__STRAWBERRIES/blob/master/package.json)，I hope you guys enjoy it😘 ~
+
+**License**
+[MIT](https://github.com/Harris-Shelby/SUGAR__AND__STRAWBERRIES/blob/master/LICENSE). Copyright (c) 2020 Harris Shelby &hearts;穿堂风 &reg;
