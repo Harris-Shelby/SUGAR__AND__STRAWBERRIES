@@ -274,6 +274,29 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.confession_balloon {
+  height: 35rem;
+  width: 50rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ffca74;
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.25); }
+  .confession_balloon-text {
+    width: 52%;
+    padding: 1rem 0.8rem;
+    background-color: #0000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #664390;
+    border-left: 0.5rem solid #fff;
+    border-right: 0.5rem solid #fff; }
+
 .composition {
   height: 30rem;
   width: 60%;
@@ -307,6 +330,31 @@ body {
     animation-iteration-count: infinite; }
     .composition__vibrating--heart:last-child::after {
       box-shadow: 0 0 0 !important; }
+
+.composition-small {
+  display: inline-block;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: 0 auto;
+  position: relative; }
+  .composition-small__vibrating--heart {
+    height: 4.5rem;
+    width: 100%;
+    position: absolute; }
+    .composition-small__vibrating--heart::before, .composition-small__vibrating--heart::after {
+      content: "";
+      display: table;
+      height: 2.7rem;
+      width: 1.7rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #ef1b11;
+      border-radius: 200px 200px 0 0; }
+    .composition-small__vibrating--heart::before {
+      transform: translate(-70%, -50%) rotate(-45deg); }
+    .composition-small__vibrating--heart::after {
+      transform: translate(-32%, -50%) rotate(45deg); }
 
 .rain-box {
   position: absolute;

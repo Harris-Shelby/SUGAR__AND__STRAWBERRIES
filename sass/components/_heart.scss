@@ -47,3 +47,41 @@
         }
     }
 }
+
+
+
+.composition-small {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 0 auto;
+    position: relative;
+
+    &__vibrating--heart {
+        height: 4.5rem;
+        width: 100%;
+        position: absolute;
+
+        &::before,
+        &::after {
+            content: "";
+            display: table;
+            height: 2.7rem;
+            width: 1.7rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: $color-red;
+            border-radius: 200px 200px 0 0;
+        }
+
+        &::before {
+            transform: translate(-70%, -50%)
+                rotate(-45deg);
+        }
+        &::after {
+            transform: translate(-32%, -50%)
+                rotate(45deg);
+        }
+    }
+}

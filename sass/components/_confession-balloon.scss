@@ -1,0 +1,25 @@
+.confession_balloon {
+    height: 35rem;
+    width: 50rem;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(255, 202,116);
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 1.5rem rgba($color-black, .25);
+
+    &-text {
+        width: 52%;
+        padding: 1rem 0.8rem;
+        background-color: #0000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 3.5rem;
+        color: rgb(102, 67, 144);
+        border-left: 0.5rem solid $color-white;
+        border-right: 0.5rem solid $color-white;
+    }
+}
