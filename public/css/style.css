@@ -295,7 +295,15 @@ body {
     font-size: 3.5rem;
     color: #664390;
     border-left: 0.5rem solid #fff;
-    border-right: 0.5rem solid #fff; }
+    border-right: 0.5rem solid #fff;
+    overflow: hidden;
+    white-space: nowrap; }
+
+@keyframes confession {
+  0% {
+    max-width: 0; }
+  100% {
+    max-width: 52%; } }
 
 .composition {
   height: 30rem;
