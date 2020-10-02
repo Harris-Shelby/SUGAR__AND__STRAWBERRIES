@@ -21,10 +21,10 @@ Hi there, this project is built with HTML and Sass😜. My original intention to
 
 **Task lists**
 
-- [X] 🌈 CSS animation of Dripping rain~~
-- [X] 💓 CSS animation of Beating heart~~
-- [X] 🌎 Responsive design ... Although it is still bad~~
-- [X] 🌱 HTTP/2~~
+- [X] 🌈 CSS animation of Dripping rain
+- [X] 💓 CSS animation of Beating heart
+- [X] 🌎 Responsive design ... Although it is still bad
+- [X] 🌱 HTTP/2
 - [ ] 🎶 Background music player
 - [ ] 🎈 The component of Confession balloon 
 
